@@ -1,7 +1,11 @@
+#RUNNER CLASS FOR OUR NETOWORK
+#see https://github.com/llSourcell/tensorflow_image_classifier/blob/master/src/label_image.py for help
+
+# CAN ALL BE DELETED  - RESTARTING
+
 from PIL import Image, ImageOps
 import numpy as np
 import glob
-
 
 FISH_NAMES=['Bass','Catfish','Eel','Flounder','Salmon','Shark','Trout','Tuna']
 IMG_EXTNS = ['jpg','jpeg','gif','png']
