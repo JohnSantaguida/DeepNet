@@ -826,7 +826,6 @@ def main(_):
       FLAGS.random_brightness)
 
   with tf.Session(graph=graph) as sess:
-
     if do_distort_images:
       # We will be applying distortions, so setup the operations we'll need.
       (distorted_jpeg_data_tensor,
