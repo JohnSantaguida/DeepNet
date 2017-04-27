@@ -21,6 +21,6 @@ def classify(image_path):
     # Print the scores and names for the top-10 predictions.
     model.print_scores(pred=pred, k=10, only_first_name=True)
 
-image_path = ( '../Eel/eel_4.jpg')
+image_path = ( 'Shark/shark_1.jpg')
 print ("-----------------------------------------------------")
 print(classify(image_path))
