@@ -1,13 +1,18 @@
-from PIL import Image
+from PIL import Image, ImageOps
+import numpy as np
 import glob
 
 
 FISH_NAMES=['Bass','Catfish','Eel','Flounder','Salmon','Shark','Trout','Tuna']
 IMG_EXTNS = ['jpg','jpeg','gif','png']
 image_list = []
+image_labels = []
 for ex in IMG_EXTNS:
-    for filename in glob.glob('./*/*.' + ex): #pull images into list
-        im=Image.open(filename)
-        image_list.append(im)
-#print(image_list) -Debug
-
+    for fish in FISH_NAMES:
+        for filename in glob.glob('./' + fish + '/*.' + ex): #pull images into list
+            im=Image.open(filename).convert('LA')
+            im.thumbnail((28,28), Image.ANTIALIAS)
+            image_labels.append(fish)
+            image_list.append(im)
+print(image_list)
+print(len(image_labels))
